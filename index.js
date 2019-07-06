@@ -35,16 +35,16 @@ app.get('/api/persons', (req, res) => {
     res.json(phoneNumbers)
 })
 
-app.get('/info', (req, res) => {
+app.get('api/info', (req, res) => {
     res.write('<p>Phonebook has info for ' + phoneNumbers.length + ' people</p>');
     res.write(Date())
 })
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.send('/index.html')
 })
 
-app.get('/morgan', (req, res) => {
+app.get('api/morgan', (req, res) => {
     res.send('Hello from Morgan!')
 })
 

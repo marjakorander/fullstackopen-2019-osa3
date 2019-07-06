@@ -1,1 +1,1 @@
-https://radiant-citadel-58369.herokuapp.com/api/persons
+https://radiant-citadel-58369.herokuapp.com/
