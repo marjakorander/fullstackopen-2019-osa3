@@ -6,6 +6,7 @@ const cors = require('cors')
 app.use(bodyParser.json())
 app.use(morgan('tiny'))
 app.use(cors())
+app.use(express.static('build'))
 
 let phoneNumbers = [
     {
@@ -37,6 +38,10 @@ app.get('/api/persons', (req, res) => {
 app.get('/info', (req, res) => {
     res.write('<p>Phonebook has info for ' + phoneNumbers.length + ' people</p>');
     res.write(Date())
+})
+
+app.get('/', (req, res) => {
+    res.send('/index.html')
 })
 
 app.get('/morgan', (req, res) => {
